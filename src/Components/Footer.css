@@ -1,0 +1,114 @@
+.luxury-footer {
+  position: relative;
+  background: linear-gradient(135deg, #000000 30%, #8b0000 70%);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  border-top: 2px solid rgba(255, 215, 0, 0.3);
+  box-shadow: 0 -4px 25px rgba(255, 215, 0, 0.2);
+}
+
+/* Glassmorphism Glow Overlay */
+.luxury-footer::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.1), transparent 70%);
+  top: -25%;
+  left: -25%;
+  z-index: 0;
+  animation: rotateGlow 20s linear infinite;
+}
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.footer-left {
+  text-align: center;
+  z-index: 1;
+}
+.footer-left h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.footer-left h2 span {
+  color: gold;
+  text-shadow: 0 0 10px gold;
+}
+.footer-left p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Links */
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 0;
+  list-style: none;
+  z-index: 1;
+}
+.footer-links li {
+  cursor: pointer;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+.footer-links li:hover {
+  color: gold;
+  text-shadow: 0 0 10px gold;
+}
+
+/* Social Icons */
+.footer-social {
+  display: flex;
+  gap: 1.2rem;
+  z-index: 1;
+}
+.footer-social a {
+  font-size: 1.5rem;
+  color: white;
+  transition: transform 0.3s, color 0.3s;
+}
+.footer-social a:hover {
+  transform: scale(1.2);
+  color: gold;
+  text-shadow: 0 0 10px gold;
+}
+
+/* Bottom */
+.footer-bottom {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* Floating Background Icons */
+.floating-icon {
+  position: absolute;
+  font-size: 3rem;
+  color: rgba(255, 215, 0, 0.15);
+  z-index: 0;
+}
+.dumbbell {
+  top: 20%;
+  left: 10%;
+}
+.heartbeat {
+  bottom: 20%;
+  right: 15%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
